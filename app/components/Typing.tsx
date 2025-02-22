@@ -25,7 +25,6 @@ export const letterVariants = {
 
 interface TypingProps {
   text: string;
-  [key: string]: any;
 }
 
 const Typing = ({ text, ...rest }: TypingProps) => (
