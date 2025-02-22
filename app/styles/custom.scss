@@ -1,0 +1,23 @@
+@use './titles';
+@use './status';
+@use './components/headerConsole';
+@use './components/mainConsole';
+@use './components/logs';
+
+.source-parent-wrapper {
+    display: flex;
+    padding: 16px 8px 8px;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 12px;
+    background: var(--Blue-Grey-200, #e2e7ee);
+    width: 920px;
+    .source-child-wrapper {
+        display: flex;
+        align-items: flex-start;
+        border-radius: 8px;
+        background: var(--Grey-700, #1f2023);
+        width: 100%;
+        padding: 24px;
+    }
+}
