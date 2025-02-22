@@ -1,22 +1,24 @@
 "use client";
 
+// Libraries
 import { motion } from "framer-motion";
+
+// Utils
 import { useEffect, useState } from "react";
 
 interface BarProcessingProps {
-  limit?: number; // Número de bloques que se animarán
+  limit?: number; // Number of blocks that will be animated
 }
 
-const totalBlocks = 35; // Total de bloques en la barra
-const totalDuration = 1.5; // Duración total en segundos
+const totalBlocks = 35; // Total blocks in the bar
+const totalDuration = 1.5; // Total duration in seconds
 
-// Simula "power1.in" de GSAP
 const easeFunction = (t: number) => t * t;
 
 const BarProcessing: React.FC<BarProcessingProps> = ({ limit = 12 }) => {
   const [loadedBlocks, setLoadedBlocks] = useState<number[]>([]);
-  const [progress, setProgress] = useState(0); // % de progreso
-  const [isCompleted, setIsCompleted] = useState(false); // Indica si la carga terminó
+  const [progress, setProgress] = useState(0); // % of progress
+  const [isCompleted, setIsCompleted] = useState(false); // Indicate if the loading is finished
 
   useEffect(() => {
     const animateBlocks = async () => {
@@ -26,10 +28,10 @@ const BarProcessing: React.FC<BarProcessingProps> = ({ limit = 12 }) => {
 
         setTimeout(() => {
           setLoadedBlocks((prev) => [...prev, i]);
-          setProgress(Math.round(((i + 1) / totalBlocks) * 100)); // ✅ Calcula el progreso real
+          setProgress(Math.round(((i + 1) / totalBlocks) * 100)); // Calculate the actual progress
 
           if (i === limit - 1) {
-            setTimeout(() => setIsCompleted(true), 300); // ✅ Activa el brillo cuando termine la animación
+            setTimeout(() => setIsCompleted(true), 400); // Activate the glow effect when the bar process is completed
           }
         }, easedDelay * 1000);
       }

@@ -25,8 +25,12 @@ const fira_mono = Fira_Mono({
 
 export default function Sandbox() {
   return (
-    
-    <div className="flex items-center justify-center m-h-screen w-screen pt-[50px] pb-[100px] relative">
+    <div className="flex flex-col items-center justify-center w-screen pt-[50px] pb-[100px] relative">
+      <div className="w-full max-w-[920px] flex items-center gap-2 mb-4">
+        <Link href="https://reasoner.com/" target='_blank' className="text-sm tracking-[-0.01em] opacity-[20%] hover:opacity-[50%] transition-all duration-300">Reasoner</Link>
+        <div className="text-sm opacity-[20%]">/</div>
+        <Link href="/" className="text-sm tracking-[-0.01em] text-white border-solid border-b border-transparent hover:border-white transition-all duration-300">Console</Link>
+      </div>
       <div className="source-parent-wrapper">
         <HeaderConsole />
         <div className="source-child-wrapper">

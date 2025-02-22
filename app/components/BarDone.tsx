@@ -1,6 +1,8 @@
 "use client";
 
+// Libraries
 import { motion } from "framer-motion";
+// Utils
 import { useEffect, useState } from "react";
 
 interface BarDoneProps {

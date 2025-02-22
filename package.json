@@ -9,14 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@cyriacbr/react-split-text": "^1.0.0",
     "framer-motion": "^12.4.7",
-    "motion": "^12.4.7",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sass": "^1.85.0",
-    "split-type": "^0.3.4"
+    "sass": "^1.85.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

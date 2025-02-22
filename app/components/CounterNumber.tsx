@@ -1,6 +1,8 @@
 "use client";
 
+// Libraries
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+// Utils
 import { useEffect, useState } from "react";
 
 interface CounterNumberProps {

@@ -1,5 +1,39 @@
 .source-parent-wrapper {
     .source-child-wrapper {
+        .overall-icons{
+            .source-status{
+                &.sources-done-status{
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    .status-icon{
+                        span{
+                            .overlay{
+                                animation: none;
+                            }
+                        }
+                    }
+                }
+                &.sources-processing-status{
+                    .status-icon{
+                        span{
+                            &.dots{
+                                &:nth-child(1){
+                                    animation-delay: 0s;
+                                }
+                                &:nth-child(2){
+                                    animation-delay: 0.2s;
+                                }
+                                &:nth-child(3){
+                                    animation-delay: 0.4s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .source-top-progress-wrpper {
             padding: 8px;
             border: 1px solid #505154;
@@ -54,6 +88,12 @@
                             color: #006be2;
                         }
                     }
+                }
+            }
+            &.is-ready{
+                &:hover{
+                    background-color: rgba(2, 255, 86, 0.07);
+                    border-color: rgba(2, 255, 86, 0.3);
                 }
             }
             &.is-processing{
