@@ -36,7 +36,7 @@ const CounterNumber: React.FC<CounterNumberProps> = ({ value, duration, delay = 
     }
   }, [value, count, duration, delay, isClient]);
 
-  // Evitar renderizado en el servidor (SSR)
+  // Prevent server-side rendering
   if (!isClient) return <span>{value}</span>;
 
   return <motion.span className="data-value">{rounded}</motion.span>;

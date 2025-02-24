@@ -8,13 +8,13 @@
         .sources-header-divider {
             width: 1px;
             height: 12px;
-            background: #9d9d9d;
+            background: var(--Grey-300);
         }
         .source-header-text-value {
             overflow: hidden;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
-            color: var(--Grey-500, #505154);
+            color: var(--Grey-500);
             font-feature-settings: "liga" off, "clig" off;
             text-overflow: ellipsis;
             font-family: Fira Mono;
@@ -27,7 +27,7 @@
         }
         .source-header-text-key {
             overflow: hidden;
-            color: var(--Blue-Secondary, #00448f);
+            color: var(--Blue-Secondary);
             font-feature-settings: "liga" off, "clig" off;
             text-overflow: ellipsis;
             font-family: DM Sans;
@@ -40,7 +40,7 @@
         }
         .source-pill{
             border-radius: 4px;
-            border: 1px solid var(--Blue-Main, #006be2);
+            border: 1px solid var(--Blue-Main);
             background: var(--Blue-100, #f1f8ff);
             display: flex;
             padding: 4px 8px;
@@ -48,7 +48,7 @@
             align-items: center;
             gap: 8px;
             .source-header-text-pill {
-                color: var(--Blue-Secondary, #00448f);
+                color: var(--Blue-Secondary);
                 font-feature-settings: "liga" off, "clig" off;
                 font-family: DM Sans;
                 font-size: 12px;
@@ -60,7 +60,7 @@
         .source-green-pill {
             border-radius: 4px;
             border: 1px solid rgba(0, 0, 0, .1);
-            background: #02ff56;
+            background: var(--Green-Main);
             display: flex;
             padding: 6px 10px 6px 8px;
             justify-content: center;

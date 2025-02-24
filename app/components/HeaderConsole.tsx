@@ -64,19 +64,19 @@ const Timer = () => {
       </div>
       <div className="flex flex-row items-center gap-6">
         <div className="is-timeline">
-          <span className="source-header-text-key">STARTED:</span>
+          <span className="source-header-text-key">STARTED: </span>
           <span className="source-header-text-value">13:45:00 EST</span>
         </div>
         <div className="sources-header-divider mt-1 w-px h-6 bg-gray-400"></div>
         <div className="is-timeline">
-          <span className="source-header-text-key">DURATION:</span>
+          <span className="source-header-text-key">DURATION: </span>
           <span className="source-header-text-value is-duration-time">
             {duration.minutes}M {duration.seconds}S
           </span>
         </div>
         <div className="sources-header-divider mt-1 w-px h-6 bg-gray-400"></div>
         <div className="is-timeline">
-          <span className="source-header-text-key">TIME LEFT:</span>
+          <span className="source-header-text-key">TIME LEFT: </span>
           <span className="source-header-text-value is-time-left">
             ∼{timeLeft.minutes}M {timeLeft.seconds}S
           </span>

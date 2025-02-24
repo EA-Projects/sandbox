@@ -10,13 +10,13 @@
     flex-direction: column;
     gap: 16px;
     border-radius: 12px;
-    background: var(--Blue-Grey-200, #e2e7ee);
+    background: var(--Blue-Grey-200);
     width: 920px;
     .source-child-wrapper {
         display: flex;
         align-items: flex-start;
         border-radius: 8px;
-        background: var(--Grey-700, #1f2023);
+        background: var(--Grey-700);
         width: 100%;
         padding: 24px;
     }

@@ -36,7 +36,7 @@
         }
         .source-top-progress-wrpper {
             padding: 8px;
-            border: 1px solid #505154;
+            border: 1px solid var(--Grey-500);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -46,7 +46,7 @@
                 align-items: center;
                 gap: 1px;
                 padding: 4px;
-                border: 1px solid #9D9D9D;
+                border: 1px solid var(--Grey-300);;
                 .inner-block-bar{
                     position: relative;
                     &.bg-empty{
@@ -85,7 +85,7 @@
                     &.is-number-load{
                         width: 32px;
                         &.is-processing{
-                            color: #006be2;
+                            color: var(--Blue-Main);;
                         }
                     }
                 }
@@ -104,7 +104,7 @@
             }
         }
         .source-processing-title-icon {
-            color: var(--Blue-Main, #006be2);
+            color: var(--Blue-Main);
             font-feature-settings: "liga" off, "clig" off;
             font-family: Fira Mono;
             font-size: 13px;
@@ -117,16 +117,16 @@
             position: relative;
             display: inline-block;
             padding: 14px 8px 8px;
-            border: 1px dashed #505154;
+            border: 1px dashed var(--Grey-500);
             &:before {
                 content: "Details";
                 position: absolute;
                 top: -8px;
                 left: 24px;
-                background: #1f2023;
+                background: var(--Grey-700);
                 padding: 0 8px;
                 font-weight: 700;
-                color: var(--Grey-300, #9d9d9d);
+                color: var(--Grey-300);
                 font-feature-settings: "liga" off, "clig" off;
                 font-family: Fira Mono;
                 font-size: 13px;
@@ -135,7 +135,7 @@
                 line-height: 120%;
             }
             .sources-bullets {
-                color: var(--Grey-200, #9D9D9D);
+                color: var(--Grey-300);
                 font-feature-settings: "liga" off, "clig" off;
                 font-family: Fira Mono;
                 font-size: 13px;

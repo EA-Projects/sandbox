@@ -16,7 +16,7 @@ const BarDone: React.FC<BarDoneProps> = ({ limit = 12 }) => {
   const [loadedBlocks, setLoadedBlocks] = useState<number[]>([]);
   const [progress, setProgress] = useState(0);
   const [statusText, setStatusText] = useState("PROCESSING");
-  const [displayText, setDisplayText] = useState(""); // Texto con efecto de tipeo
+  const [displayText, setDisplayText] = useState(""); // Text with typing effect
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -41,16 +41,16 @@ const BarDone: React.FC<BarDoneProps> = ({ limit = 12 }) => {
       }, (totalDuration * 1000) / 100);
 
       setTimeout(() => {
-        setStatusText(""); // Oculta "PROCESSING"
+        setStatusText(""); // Hide "PROCESSING"
 
-        // Simula tipeo de "ALL DONE"
+        // Simulate typing of "ALL DONE"
         const finalText = "ALL DONE";
         let index = 0;
         const typingInterval = setInterval(() => {
           setDisplayText(finalText.slice(0, index + 1));
           index++;
           if (index === finalText.length) clearInterval(typingInterval);
-        }, 50); // Velocidad del tipeo
+        }, 50); // Typing speed
 
         setIsReady(true);
       }, totalDuration * 1000);

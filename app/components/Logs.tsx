@@ -10,7 +10,7 @@ const Logs = () => {
                 <div className="flex flex-row items-center gap-x-[8px]">
                     <div className="source-processing-title">Status Log</div>
                 </div>
-                <div className="bg-[#9D9D9D] w-full h-[1px]"></div>
+                <div className="bg-grey_300 w-full h-[1px]"></div>
             </div>
             <div className="sources-log-heading is-live-updates my-[16px]">[LIVE UPDATES]</div>
             <div className="flex flex-col gap-y-[6px] mt-5 overflow-hidden" style={{height: "calc(100% - 50px)"}}>

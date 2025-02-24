@@ -11,6 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        grey_300: "var(--Grey-300)",
       },
       fontFamily: {
         sans: ["DM Sans", "sans-serif"],

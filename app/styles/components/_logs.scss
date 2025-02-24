@@ -1,12 +1,12 @@
 .source-parent-wrapper {
     .source-child-wrapper {
         .source-logs-wrapper {
-            border-left: 1px solid var(--Grey-500, #505154);
+            border-left: 1px solid var(--Grey-500);
             padding-left: 24px;
             margin-left: 24px;
             .sources-log-heading {
                 overflow: hidden;
-                color: var(--Blue-300, #b9daff);
+                color: var(--Blue-300);
                 font-feature-settings: "liga" off, "clig" off;
                 font-family: Fira Mono;
                 font-size: 10px;
@@ -46,7 +46,7 @@
                 }
             }
             .sources-sub-bullets {
-                color: var(--Grey-300, #9d9d9d);
+                color: var(--Grey-300);
                 font-feature-settings: "liga" off, "clig" off;
                 font-family: Fira Mono;
                 font-size: 12px;
