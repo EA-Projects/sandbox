@@ -15,35 +15,6 @@
                 line-height: normal;
                 letter-spacing: .6px;
                 text-transform: uppercase;
-                &.is-live-updates{
-                    animation: liveUpdates 10s linear infinite;
-                    @keyframes liveUpdates {
-                        0%{
-                            opacity: 1;
-                        }
-                        10%{
-                            opacity: 1;
-                        }
-                        20.5%{
-                            opacity: 1;
-                        }
-                        21%{
-                            opacity: 0;
-                        }
-                        21.5%{
-                            opacity: 1;
-                        }
-                        22%{
-                            opacity: 0;
-                        }
-                        22.5%{
-                            opacity: 1;
-                        }
-                        100%{
-                            opacity: 1;
-                        }
-                    }
-                }
             }
             .sources-sub-bullets {
                 color: var(--Grey-300);

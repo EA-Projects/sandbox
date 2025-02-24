@@ -12,7 +12,18 @@ const Logs = () => {
                 </div>
                 <div className="bg-grey_300 w-full h-[1px]"></div>
             </div>
-            <div className="sources-log-heading is-live-updates my-[16px]">[LIVE UPDATES]</div>
+            <motion.div 
+                className="sources-log-heading my-[16px]"
+                    animate={{ opacity: [100, 100, 0, 100, 0, 100] }}
+                    transition={{ 
+                        duration: 1,
+                        times: [0, 0.8, 0.85, 0.90, 0.95, 1],
+                        delay: 1,
+                        ease: "linear",
+                    }}
+                >
+                [LIVE UPDATES]
+            </motion.div>
             <div className="flex flex-col gap-y-[6px] mt-5 overflow-hidden" style={{height: "calc(100% - 50px)"}}>
                 <motion.div
                     className="log-detail"
