@@ -9,6 +9,10 @@ import { DM_Sans, Fira_Mono } from 'next/font/google';
 export const metadata: Metadata = {
   title: "Reasoner - Sandbox",
   description: "Built for AI Stacks that demand precision and accuracy.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const dm_sans = DM_Sans({
