@@ -10,7 +10,7 @@ export default function Index() {
         <Link href="/blocks" className="text-sm tracking-[-0.01em] opacity-[30%] hover:opacity-[60%] transition-all duration-400">Report Blocks</Link>
         <Link href="/blocks#stats" className="pl-4 text-sm tracking-[-0.01em] opacity-[30%] hover:opacity-[60%] transition-all duration-400">— Stats</Link>
         <Link href="/blocks#kpi-cards" className="pl-4 text-sm tracking-[-0.01em] opacity-[30%] hover:opacity-[60%] transition-all duration-400">— KPI Cards</Link>
-        <Link href="/blocks#donut-chart" className="text-sm tracking-[-0.01em] opacity-[30%] hover:opacity-[60%] transition-all duration-400">Donut Chart</Link>
+        <Link href="/blocks#donut-chart" className="pl-4 text-sm tracking-[-0.01em] opacity-[30%] hover:opacity-[60%] transition-all duration-400">— Donut Chart</Link>
         <Link href="#" className="text-sm tracking-[-0.01em] opacity-[10%] pointer-events-none hover:opacity-[10%] transition-all duration-400">Other components</Link>
         <div className="flex gap-2 items-center absolute bottom-0">
           <Link href="https://console.reasoner.sh/" target='_blank' className="text-sm tracking-[-0.01em] opacity-[20%] hover:opacity-[50%] transition-all duration-400">console.reasoner.sh</Link>
