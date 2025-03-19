@@ -1,0 +1,73 @@
+.tooltip{
+    > div > div{
+        @apply w-full;
+        @apply text-left;
+        h4{
+            @apply text-sm;
+            @apply mb-1;
+        }
+        p{
+            @apply text-xs;
+            @apply text-gray-600;
+            @apply mb-3;
+        }
+        a{
+            @apply text-xs;
+            @apply text-blue-200;  
+            @apply transition-colors;
+            @apply duration-300;
+            &:hover{
+                @apply text-blue-400;  
+            }
+            &.button{
+                @apply inline-block;
+                @apply rounded-sm; 
+                @apply text-blue-200; 
+                @apply border;
+                @apply border-blue-800/30;
+                @apply bg-blue-900/20;
+                @apply px-3;
+                @apply py-1.5;
+                &:hover{
+                    @apply bg-blue-900/40;
+                }
+            }
+        }
+        table{
+            @apply w-full;
+            @apply bg-blue-900/20;
+            @apply border;
+            @apply border-blue-800/30;
+            thead{
+                tr{
+                    th{
+                        @apply w-fit;
+                        font-size: 10px;
+                        @apply uppercase;
+                        @apply text-white;
+                        @apply px-2;
+                        @apply py-1;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        @apply text-xs;
+                        @apply text-gray-600;
+                        @apply px-2;
+                        @apply py-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.recharts-tooltip-wrapper{
+    > div {
+        @apply dark:bg-blue_900;
+        @apply dark:border-blue-800/30;
+        @apply rounded-sm;
+    }
+}

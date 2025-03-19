@@ -18,7 +18,7 @@ export const letterVariants = {
     opacity: 1, 
     transition: { 
       duration: 0.05, 
-      ease: "steps(1, end)",
+      ease: "linear",
     } 
   }
 };

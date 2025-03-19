@@ -1,8 +1,11 @@
 @use './titles';
-@use './status';
-@use './components/headerConsole';
-@use './components/mainConsole';
-@use './components/logs';
+// Console
+@use './components/console/status';
+@use './components/console/headerConsole';
+@use './components/console/mainConsole';
+@use './components/console/logs';
+// Chart
+@use './components/chart/tooltip';
 
 .source-parent-wrapper {
     display: flex;

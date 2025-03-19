@@ -1,33 +1,23 @@
-// Styles
-import './styles/custom.scss';
-import './globals.css';
-
 // Utils
 import Link from 'next/link';
 
-// Components
-import HeaderConsole from './components/HeaderConsole';
-import MainConsole from './components/MainConsole';
-import Logs from './components/Logs';
-
-export default function Sandbox() {
+export default function Index() {
   return (
-    <div className="flex flex-col items-center justify-center w-screen pt-[50px] pb-[100px] relative">
-      <div className="w-full max-w-[920px] flex items-center gap-2 mb-4">
-        <Link href="https://reasoner.com/" target='_blank' className="font-sans text-sm tracking-[-0.01em] opacity-[20%] hover:opacity-[50%] transition-all duration-300">Reasoner</Link>
-        <div className="font-sans text-sm opacity-[20%]">/</div>
-        <Link href="/" className="font-sans text-sm tracking-[-0.01em] text-white border-solid border-b border-transparent hover:border-white transition-all duration-300">Console</Link>
-      </div>
-      <div className="source-parent-wrapper">
-        <HeaderConsole />
-        <div className="source-child-wrapper">
-          <div className="flex items-stretch flex-row h-full w-full">
-            <MainConsole />
-            <Logs />
-          </div>
+    <div className="flex justify-center w-screen min-h-screen pt-[50px] pb-[50px]">
+      <div className="w-full min-h-full max-w-[1300px] flex flex-col items-start gap-1 relative">
+        <h1 className='text-xl tracking-[-0.02em] mb-5'>Reasoner Sandbox</h1>
+        <Link href="/console" className="text-sm tracking-[-0.01em] opacity-[30%] hover:opacity-[60%] transition-all duration-400">Console</Link>
+        <Link href="/blocks" className="text-sm tracking-[-0.01em] opacity-[30%] hover:opacity-[60%] transition-all duration-400">Report Blocks</Link>
+        <Link href="/blocks#stats" className="pl-4 text-sm tracking-[-0.01em] opacity-[30%] hover:opacity-[60%] transition-all duration-400">— Stats</Link>
+        <Link href="/blocks#kpi-cards" className="pl-4 text-sm tracking-[-0.01em] opacity-[30%] hover:opacity-[60%] transition-all duration-400">— KPI Cards</Link>
+        <Link href="/blocks#donut-chart" className="text-sm tracking-[-0.01em] opacity-[30%] hover:opacity-[60%] transition-all duration-400">Donut Chart</Link>
+        <Link href="#" className="text-sm tracking-[-0.01em] opacity-[10%] pointer-events-none hover:opacity-[10%] transition-all duration-400">Other components</Link>
+        <div className="flex gap-2 items-center absolute bottom-0">
+          <Link href="https://console.reasoner.sh/" target='_blank' className="text-sm tracking-[-0.01em] opacity-[20%] hover:opacity-[50%] transition-all duration-400">console.reasoner.sh</Link>
+          <div className="text-sm opacity-[20%]">—</div>
+          <Link href="https://reasoner.com/" target='_blank' className="text-sm tracking-[-0.01em] opacity-[20%] hover:opacity-[50%] transition-all duration-400">reasoner.com</Link>
         </div>
       </div>
-      <Link href="https://console.reasoner.sh/" target='_blank' className="font-sans text-sm tracking-[-0.01em] absolute bottom-[40px] opacity-[20%] hover:opacity-[50%] transition-all duration-300">console.reasoner.sh</Link>
     </div>
   );
 }

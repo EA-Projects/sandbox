@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 // Styles
 import "./globals.css";
+import './styles/custom.scss';
 
 //Fonts
 import { DM_Sans, Fira_Mono } from 'next/font/google';
@@ -20,6 +21,7 @@ const dm_sans = DM_Sans({
   subsets: ['latin'],   
 });
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const fira_mono = Fira_Mono({
   weight: ['400', '500'],
   subsets: ['latin'],     
@@ -33,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dm_sans.className} ${fira_mono.className} antialised`}
+        className={`${dm_sans.className} antialised`}
       >
         {children}
       </body>
