@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function NavigationBlocks() {
 
@@ -41,19 +41,16 @@ export default function NavigationBlocks() {
                     </svg>
                 </div>
 
-                <motion.div
-                    layout // Hace que el contenedor cambie de tamaño suavemente
-                    className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.15em] px-2 pr-0 bg-bluemain/10 rounded-sm overflow-hidden"
+                <div
+                    className="flex items-center gap-1 text-xs font-bold uppercase tracking-[0.15em] px-2 pr-0 bg-bluemain/10 rounded-sm overflow-hidden"
                     >
                     <span className="text-blue300/50 py-1.5">
                         Last updated:{" "}
-                        <AnimatePresence mode="popLayout">
-                            <span
-                                className="text-white inline-block"
-                                >
-                                {minutes === 0 ? "seconds ago" : `${minutes} minute${minutes > 1 ? "s" : ""} ago`}
-                            </span>
-                        </AnimatePresence>
+                        <span
+                            className="w-[125px] text-white inline-block"
+                            >
+                            {minutes === 0 ? "seconds ago" : `${minutes} minute${minutes > 1 ? "s" : ""} ago`}
+                        </span>
                     </span>                    
                     <div 
                         className='flex items-center gap-1 py-1.5 pl-2 pr-2 text-bluemain cursor-pointer transition-all duration-[.4s] hover:bg-blue300/5'
@@ -69,7 +66,7 @@ export default function NavigationBlocks() {
                             refresh
                         </span>
                     </div>
-                </motion.div>
+                </div>
 
                 <div className="flex min-w-[30%] items-center justify-end gap-3">
                     <div className='flex items-center gap-1 px-2.5 py-1.5 rounded-md bg-blue300/5 text-blue300/60 uppercase font-bold tracking-[0.15em] text-xs leading-none cursor-pointer transition-all duration-[.4s] hover:text-blue300 hover:bg-blue300/10'>

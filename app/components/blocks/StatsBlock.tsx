@@ -31,22 +31,22 @@ const Stat: React.FC<StatProps> = ({ statName, statValue }) => {
         <dd className="inline-block text-white font-bold tracking-normal font-outfit text-text_h2">
           {statValue}
         </dd>
-        <dt className="mt-1 text-bluemain font-bold">{statName}</dt>
+        <dt className="text-bluemain font-bold">{statName}</dt>
       </div>
 
       {/* {tooltip} */}
       <div className="cursor-auto pointer-events-none min-w-[430px] text-left absolute bottom-full left-[50%] -translate-x-[50%] opacity-0 scale-[.95] blur-sm transition-all duration-[.4s] ease-in-out group-hover:opacity-100 group-hover:blur-none group-hover:scale-[1] group-hover:pointer-events-auto">
         <div className="w-full h-full ring-1 ring-blue300/5 bg-gradient-to-b from-[#171B2D] to-black shadow-[0_10px_45px_0_#007AFF73] rounded-xl overflow-hidden pb-1"> 
-            <div className="bg-black p-4 flex items-center justify-between text-sm font-light">
+            <div className="bg-black px-4 py-3 flex items-center justify-between text-sm font-light">
               <span className='text-bluegrey300/60'>Reasoner Analysis Impact</span>
               <span className='text-bluegrey300/30'>Last update: <span className='text-bluegrey300/60'>3 minutes ago</span></span>
             </div>
             <div className='px-4'>
-              <div className="pb-2 py-3 flex items-center justify-between text-sm border-b border-blue300/15 font-light">
+              <div className="py-4 pb-3 flex items-center justify-between text-sm border-b border-blue300/15 font-light">
                 <span className='text-xs tracking-wide uppercase font-bold text-bluemain'>Data Source</span>
                 <span className='text-white'>Google Sheets</span>
               </div>
-              <div className="pb-2 py-3 text-sm font-light">
+              <div className="py-4 pb-2 text-sm font-light">
                 <p className='text-xs tracking-wide uppercase font-bold text-bluemain mb-2'>Impact</p>
                 <p className='text-bluegrey300/40 mb-2'>Updated to <span className='text-white'>“Architected for speed, reliability, and cost”</span></p>
                 <p className='text-bluegrey300/40'>Updated to <span className='text-white'>“162%”</span></p>
