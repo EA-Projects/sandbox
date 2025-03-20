@@ -6,14 +6,18 @@
   --background: #ffffff;
   --foreground: #171717;
   --Green-Main: #02ff56;
-  --Blue-Main: #006be2;
+  --Blue-Main: 0, 107, 226;
   --Blue-Secondary: #00448f;
-  --Blue-300: #b9daff;
-  --Blue-900: #0e1324;
+  --Blue-300: 185, 218, 255;
+  --Blue-900: 14, 19, 36;
   --Blue-Grey-200: #e2e7ee;
-  --Grey-300: #9d9d9d;
+  --Blue-Grey-300: 208, 215, 225;
+  --Grey-300: 157, 157, 157;
   --Grey-500: #505154;
   --Grey-700: #1f2023;
+  --text-h1: 68px;
+  --text-h2: 56px;
+  --text-badge: 9px;
 }
 
 @media (prefers-color-scheme: dark) {

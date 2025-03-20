@@ -55,8 +55,7 @@ const Stats: React.FC<StatsProps> = ({ badge, title, description, stats }) => {
   return (
     <div className="mx-auto w-full max-w-6xl px-3 py-[150px] pt-[80px] text-center">
       <Badge>{badge}</Badge>
-      <h2
-        id="features-title"
+      <h2   
         className="inline-block mb-2 py-2 text-6xl font-bold tracking-tighter"
       >
         {title}

@@ -1,14 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import {  useState, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Card, DonutChart } from '@tremor/react';
-// import { ProgressiveBlur } from '../effects/ProgressiveBlur';
+import { ProgressiveBlur } from '../effects/ProgressiveBlur';
 
 function classNames(...classes: (string | false | null | undefined)[]): string {
     return classes.filter(Boolean).join(' ');
 }
-
 interface DataItem {
     name: string;
     amount: number;
@@ -47,6 +46,14 @@ const data: DataItem[] = [
 
 export default function Donut() {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const scrollableRef = useRef<HTMLDivElement | null>(null);
+
+    const handleScroll = () => {
+        if (scrollableRef.current) {
+            setIsScrolled(scrollableRef.current.scrollTop > 5);
+        }
+    };
   return (
     <div className='mx-auto w-full max-w-6xl px-3 py-[150px] text-center'>
         <h2 className="inline-block mb-2 py-2 text-6xl font-bold tracking-tighter">
@@ -57,7 +64,7 @@ export default function Donut() {
         </p>
 
         <div className="">
-            <Card className="group overflow-hidden mt-10 sm:mx-auto sm:max-w-xl !ring-transparent shadow-none border dark:border-blue-800/30 dark:bg-blue_900 rounded-lg">
+            <Card className="group overflow-hidden mt-10 sm:mx-auto sm:max-w-xl !ring-transparent shadow-none border dark:border-blue-800/30 dark:bg-blue900 rounded-lg">
                 <div className={`grid grid-cols-2 gap-8 ${activeIndex === 0 ? 'opacity-10 blur-sm' : ''}`}>
                     <DonutChart
                         data={data}
@@ -120,14 +127,30 @@ export default function Donut() {
                     </button>
 
                     <div className="text-white absolute inset-0 text-left h-full">
-                        {/* <ProgressiveBlur
-                            direction="to-top"
-                            blurStart={0}
-                            blurEnd={5}
-                            layers={5}
-                            className="absolute w-full h-10 top-0 left-0 z-20"
-                        /> */}
-                        <div className="absolute inset-0 overflow-y-scroll no-scrollbar px-4 pt-3 z-10">
+                        <AnimatePresence>
+                            {isScrolled ? "scrolled" : "no-scrolled"}
+                            {isScrolled && (
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.3, ease: 'linear' }}
+                                    className="absolute w-full h-10 top-0 left-0 z-20 transition-all opacity-0 duration-[.3s]"
+                                    >
+                                    <ProgressiveBlur
+                                        direction="to-top"
+                                        blurStart={0}
+                                        blurEnd={5}
+                                        layers={5}
+                                        className='absolute inset-0'
+                                    />
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                        <div 
+                            className="absolute inset-0 overflow-y-scroll no-scrollbar px-4 pt-3 z-10"         
+                            ref={scrollableRef}
+                            onScroll={handleScroll}>
                             <h2 className='text-lg mb-2'>Lorem, ipsum dolor</h2>
                             <p className="text-xs text-gray-600 mb-2">
                                 It amet consectetur adipisicing elit. Assumenda quibusdam deleniti asperiores dolorum molestiae, corporis cupiditate qui eos facilis magnam sequi molestias placeat!

@@ -15,14 +15,18 @@ export default {
     current: 'currentColor',
     extend: {
       fontFamily: {
-        sans: ["DM Sans", "sans-serif"],
-        mono: ["Fira Mono", "monospace"],
+        dmsans: ["DM Sans", "sans-serif"],
+        outfit: ["Outfit", "sans-serif"],
+        firamono: ["Fira Mono", "monospace"],
       },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        grey_300: "var(--Grey-300)",
-        blue_900: "var(--Blue-900)",
+        grey300: "rgba(var(--Grey-300))",
+        bluemain: "rgba(var(--Blue-Main))",
+        blue300: "rgba(var(--Blue-300))",
+        blue900: "rgba(var(--Blue-900))",
+        bluegrey300: "rgba(var(--Blue-Grey-300))",
         // light mode
         tremor: {
           brand: {
@@ -104,6 +108,9 @@ export default {
         'tremor-full': '9999px',
       },
       fontSize: {
+        text_h1: "var(--text-h1)",
+        text_h2: "var(--text-h2)",
+        text_badge: "var(--text-badge)",
         'tremor-label': ['0.75rem', { lineHeight: '1rem' }],
         'tremor-default': ['0.875rem', { lineHeight: '1.25rem' }],
         'tremor-title': ['1.125rem', { lineHeight: '1.75rem' }],

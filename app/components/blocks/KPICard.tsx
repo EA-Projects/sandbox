@@ -39,7 +39,7 @@ export default function KPICard({ title, description, data }: KPICardProps) {
         {data.map((item, index) => (
           <div key={item.name} className="relative group">
             {/* Card */}
-            <Card className={`relative z-10 transition-all duration-[.3s] !ring-transparent shadow-none border dark:border-blue-800/30 dark:bg-blue_900 rounded-lg ${activeIndex === index ? 'opacity-10 blur-sm' : ''}`}>
+            <Card className={`relative z-10 transition-all duration-[.3s] !ring-transparent shadow-none border dark:border-blue-800/30 dark:bg-blue900 rounded-lg ${activeIndex === index ? 'opacity-10 blur-sm' : ''}`}>
               <div className="flex items-center justify-between space-x-4">
                 <dt className="text-tremor-default font-medium text-tremor-content dark:text-dark-tremor-content">
                   {item.name}
@@ -84,7 +84,7 @@ export default function KPICard({ title, description, data }: KPICardProps) {
                   animate={{ filter: "blur(0)", opacity: 1 }}
                   exit={{ filter: "blur(5px)", opacity: 0 }}
                   transition={{ duration: 0.3, ease: 'linear' }}
-                  className="absolute left-0 top-0 overflow-hidden h-full w-full flex items-center justify-center border dark:border-blue-800/30 bg-blue_900 rounded-lg z-20"
+                  className="absolute left-0 top-0 overflow-hidden h-full w-full flex items-center justify-center border dark:border-blue-800/30 bg-blue900 rounded-lg z-20"
                 >
                   <div className="fixed top-0 right-0 left-0 z-30 text-white w-full flex items-center justify-between pt-2.5 pb-3 px-4">
                     <ProgressiveBlur

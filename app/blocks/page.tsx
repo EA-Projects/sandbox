@@ -1,8 +1,72 @@
 // Components
 import Navigation from '../components/navigation/Navigation';
+import NavigationBlocks from '../components/blocks/NavigationBlocks';
 import Stats from '../components/blocks/Stats';
+import StatsBlock from '../components/blocks/StatsBlock';
 import KPICard from '../components/blocks/KPICard';
 import Donut from '../components/blocks/DonutChart';
+
+const innerStatsBlock = [
+  { statName: 'Higher project completion rate', 
+    statValue: '+25%', 
+    tooltipClass: 'transparent',
+    tooltip: (
+      <div>
+        <h4>Analysis Log</h4>
+        <p>Previous analyses initiated for your source.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Source Name</th>
+              <th>Analysis Type</th>
+              <th>Entity Analyses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">google.com</a></td>
+              <td>Light Analysis</td>
+              <td>70</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">wikipedia.org</a></td>
+              <td>Deep Analysis</td>
+              <td>190</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  { statName: 'Higher project completion rate', 
+    statValue: '2x', 
+    tooltipClass: 'transparent',
+    tooltip: (
+      <div>
+        <h4>Initiate New Analysis</h4>
+        <p>The deeper the analysis, the more powerful the insights. Choose the level that best aligns with your needs-each tier expands on the last, unlocking greater intelligence and precision.
+        </p>
+        <a href="#" className='button'>
+          Start a New Analysis
+        </a>
+      </div>
+    ),
+  },
+  { statName: 'Cross-team knowledge bridging', 
+    statValue: 'UJ9 & UJ18', 
+    tooltipClass: 'transparent',
+    tooltip: (
+      <div>
+        <h4>Significance</h4>
+        <p>Understanding this relationship is crucial for understanding how the UV tool manages project dependencies and ensures consistent builds.
+        </p>
+        <a href="#" className='button'>
+          Lear more about Significance
+        </a>
+      </div>
+    ),
+  },
+];
 
 const innerStats = [
   { statName: 'Bandwith increase', 
@@ -178,10 +242,19 @@ export default function Blocks() {
         links={[
           { linkName: "Report Blocks", linkURL: "/blocks" },
         ]}
-        widthClass="max-w-6xl px-3" 
+        widthClass="max-w-7xl px-3" 
       />
 
+      <NavigationBlocks />
+
       <div id="stats" className='w-full'>
+        <StatsBlock 
+          title="Strategic Workflow Efficiency and Project Impact" 
+          badge="performance data" 
+          description="Performance analysis reveals consistent impact across 5 distinct projects with higher completion rates than team average. Directly assigned issues move through workflow with fewer status transitions, positioning the engineer as a valuable bridge between implementation and product teams." 
+          stats={innerStatsBlock} 
+        />
+
         <Stats 
           title="Architected for speed and reliability" 
           badge="Security at Scale" 

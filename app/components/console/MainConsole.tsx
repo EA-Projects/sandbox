@@ -64,7 +64,7 @@ const MainConsole = () => {
         <div className="source-processing-title !capitalize !text-[14px]">
             Overall Progress
         </div>
-        <div className="bg-grey_300 w-full h-[1px]"></div>
+        <div className="bg-grey300 w-full h-[1px]"></div>
       </div>
 
       {/* BarDone component is used to show the progress of the Overall */}
@@ -76,7 +76,7 @@ const MainConsole = () => {
             Analysis Phases
           </div>
         </div>
-        <div className="bg-grey_300 w-full h-[1px]"></div>
+        <div className="bg-grey300 w-full h-[1px]"></div>
       </div>
 
       <div className="flex flex-row justify-between w-full items-center gap-x-[8px]">

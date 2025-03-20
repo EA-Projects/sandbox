@@ -5,7 +5,7 @@ import "./globals.css";
 import './styles/custom.scss';
 
 //Fonts
-import { DM_Sans, Fira_Mono } from 'next/font/google';
+import { DM_Sans, Fira_Mono, Outfit } from 'next/font/google';
 
 export const metadata: Metadata = {
   title: "Reasoner - Sandbox",
@@ -17,6 +17,12 @@ export const metadata: Metadata = {
 };
 
 const dm_sans = DM_Sans({
+  weight: ['300', '400', '500', '600'],
+  subsets: ['latin'],   
+});
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const outfit = Outfit({
   weight: ['400', '500', '600'],
   subsets: ['latin'],   
 });
